@@ -43,7 +43,6 @@
         <strong><span class="auto-style2">Üye Girişi</span></strong><table class="auto-style4">
             <tr>
                 <td class="auto-style6">Kullanıcı adı</td>
-                <strong>
                 <td class="auto-style7">
                     <asp:TextBox ID="txt_kuladi" runat="server" Width="180px"></asp:TextBox>
                 </td>
@@ -63,7 +62,7 @@
             <tr>
                 <td class="auto-style5">&nbsp;</td>
                 <td class="auto-style8">
-                    <asp:Button ID="btn_girisyap" runat="server" style="text-align: left" Text="Giriş Yap" Width="139px" />
+                    <asp:Button ID="btn_girisyap" runat="server" style="text-align: left" Text="Giriş Yap" Width="139px" OnClick="btn_girisyap_Click" />
                 </td>
                 <td class="auto-style9">&nbsp;</td>
             </tr>
@@ -73,7 +72,7 @@
                 <td class="auto-style9">&nbsp;</td>
             </tr>
         </table>
-        </strong>
+
         <br />
     
     </div>
