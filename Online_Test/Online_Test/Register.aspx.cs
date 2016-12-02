@@ -27,26 +27,31 @@ namespace Online_Test
             if (con.State == System.Data.ConnectionState.Open)
             {
 
-
-
-
-
-
-
-                if (txt_parola1.Text == txt_parola2.Text)
+                string q1 = "select count(*) from Uyeler where mail='"+ txt_mail.Text +"'";
+                SqlCommand cmd1 = new SqlCommand(q1, con);
+                cmd1.ExecuteNonQuery();
+                int say = (int)cmd1.ExecuteScalar();
+                if (say != 0)
                 {
-                    string q = "insert into Uyeler(ad,soyad,mail,parola) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "')";
-                    SqlCommand cmd = new SqlCommand(q, con);
-                    cmd.ExecuteNonQuery();
-                    lbl_hata.Text = "Kayıdınız oluşturuldu.";
+                    lbl_hata.Text = "Mail adresi kullanılıyor!";
                 }
                 else {
-                    lbl_hata.Text = "Parolalar uyuşmuyor!";
 
+                    if (txt_parola1.Text == txt_parola2.Text)
+                    {
+                        string q = "insert into Uyeler(ad,soyad,mail,parola) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "')";
+                        SqlCommand cmd = new SqlCommand(q, con);
+                        cmd.ExecuteNonQuery();
+                        lbl_hata.Text = "Kayıdınız oluşturuldu.";
+                        /*
+                        ----Burada kullanici sayfasina yonlendirilecek! 
+                         */
+                    }
+                    else
+                    {
+                        lbl_hata.Text = "Parolalar uyuşmuyor!";
+                    }
                 }
-
-               
-
             }
             con.Close();
 
