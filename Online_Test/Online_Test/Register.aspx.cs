@@ -21,7 +21,6 @@ namespace Online_Test
         protected void btn_uyeol_Click(object sender, EventArgs e)
         {
             string baglanti = WebConfigurationManager.ConnectionStrings["OnlineTestConnectionString"].ConnectionString;
-            //string baglanti = "Server=onlinetest.database.windows.net;Database=Online_Test;User ID=onlinetest;Password=g53*f[/5A;Trusted_Connection=False;";
             SqlConnection con = new SqlConnection(baglanti);
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
@@ -57,6 +56,6 @@ namespace Online_Test
 
         }
 
-
+        
     }
 }

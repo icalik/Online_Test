@@ -32,7 +32,8 @@
                     <asp:TextBox ID="txt_ad" runat="server" Width="180px"></asp:TextBox>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_ad" ErrorMessage="Lütfen adınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td>Soyadiniz</td>
@@ -40,7 +41,8 @@
                     <asp:TextBox ID="txt_soyad" runat="server" Width="180px"></asp:TextBox>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_soyad" ErrorMessage="Lütfen soyadınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td>Mail Adresiniz</td>
@@ -48,23 +50,30 @@
                     <asp:TextBox ID="txt_mail" runat="server" Width="180px"></asp:TextBox>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txt_mail" ErrorMessage="Lütfen mail adresinizi eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txt_mail" ErrorMessage="Mail uygun formatta değil." ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td>Parola</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txt_parola1" runat="server" Width="180px"></asp:TextBox>
+                    <asp:TextBox ID="txt_parola1" runat="server" Width="180px" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_parola1" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txt_parola2" ControlToValidate="txt_parola1" ErrorMessage="Parolalar Uyuşmuyor." ForeColor="Red"></asp:CompareValidator>
+                </td>
             </tr>
              <tr>
                 <td>Parola Yeniden</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txt_parola2" runat="server" Width="180px"></asp:TextBox>
+                    <asp:TextBox ID="txt_parola2" runat="server" Width="180px" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_parola2" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                 </td>
             </tr>
             <tr>
                 <td>Profil Fotografi</td>
@@ -80,6 +89,7 @@
                  </td>
                 <td>&nbsp;</td>
             </tr>
+             
              <tr>
                 <td>&nbsp;</td>
                 <td>
