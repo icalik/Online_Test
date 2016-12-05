@@ -13,6 +13,7 @@ namespace Online_Test
 {
     public partial class Register : System.Web.UI.Page
     {
+        string fotoisim;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -42,39 +43,48 @@ namespace Online_Test
                         string uzanti;
                         uzanti = Path.GetExtension(fu_kayit.PostedFile.FileName);
                         double boyut = fu_kayit.PostedFile.ContentLength;
-                        if (uzanti == ".jpg" || uzanti == ".JPG")
+                        if (fu_kayit.HasFile)
                         {
-                            if (boyut < 1048576)
+                            if (uzanti == ".jpg" || uzanti == ".JPG")
                             {
-                                string fotoisim = txt_mail.Text + ".jpg";
-                                fu_kayit.SaveAs(Server.MapPath("fotograf/" + fotoisim));
-
-                                string q = "insert into Uyeler(ad,soyad,mail,parola,profil_foto) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "', '" + fotoisim + "')";
-                                SqlCommand cmd = new SqlCommand(q, con);
-                                cmd.ExecuteNonQuery();
-                                lbl_hata.Text = "Kayıdınız oluşturuldu.";
-                                /*
-                                ----Burada kullanici sayfasina yonlendirilecek! 
-                                 */
+                                if (boyut < 1048576)
+                                {
+                                     fotoisim = txt_mail.Text + ".jpg";
+                                    fu_kayit.SaveAs(Server.MapPath("fotograf/" + fotoisim));
+                                    
+                                }
+                                else
+                                {
+                                    lbl_hata.Text = "Dosya boyutunu 1 mb dan az giriniz.";
+                                }
                             }
                             else
                             {
-                                lbl_hata.Text = "Dosya boyutunu 1 mb dan az giriniz.";
+                                lbl_hata.Text = "Lütfen .jpg uzantılı resim ekleyiniz.";
                             }
                         }
-                        else
-                        {
-                            lbl_hata.Text = "Lütfen .jpg uzantılı resim ekleyiniz.";
+                        else {
+                            fotoisim = "profilfoto.jpg";
+                            
                         }
+                        string q = "insert into Uyeler(ad,soyad,mail,parola,profil_foto) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "', '" + fotoisim + "')";
+                        SqlCommand cmd = new SqlCommand(q, con);
+                        cmd.ExecuteNonQuery();
+                        lbl_hata.Text = "Kayıdınız oluşturuldu.";
+                        /*
+                        ----Burada kullanici sayfasina yonlendirilecek! 
+                         */
 
-                        
-                       
+
+
+
                     }
                     else
                     {
                         lbl_hata.Text = "Parolalar uyuşmuyor!";
                     }
                 }
+                
             }
             con.Close();
 
