@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Configuration;
 
 namespace Online_Test
@@ -38,13 +39,36 @@ namespace Online_Test
 
                     if (txt_parola1.Text == txt_parola2.Text)
                     {
-                        string q = "insert into Uyeler(ad,soyad,mail,parola) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "')";
-                        SqlCommand cmd = new SqlCommand(q, con);
-                        cmd.ExecuteNonQuery();
-                        lbl_hata.Text = "Kayıdınız oluşturuldu.";
-                        /*
-                        ----Burada kullanici sayfasina yonlendirilecek! 
-                         */
+                        string uzanti;
+                        uzanti = Path.GetExtension(fu_kayit.PostedFile.FileName);
+                        double boyut = fu_kayit.PostedFile.ContentLength;
+                        if (uzanti == ".jpg" || uzanti == ".JPG")
+                        {
+                            if (boyut < 1048576)
+                            {
+                                string fotoisim = txt_mail.Text + ".jpg";
+                                fu_kayit.SaveAs(Server.MapPath("fotograf/" + fotoisim));
+
+                                string q = "insert into Uyeler(ad,soyad,mail,parola,profil_foto) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "', '" + fotoisim + "')";
+                                SqlCommand cmd = new SqlCommand(q, con);
+                                cmd.ExecuteNonQuery();
+                                lbl_hata.Text = "Kayıdınız oluşturuldu.";
+                                /*
+                                ----Burada kullanici sayfasina yonlendirilecek! 
+                                 */
+                            }
+                            else
+                            {
+                                lbl_hata.Text = "Dosya boyutunu 1 mb dan az giriniz.";
+                            }
+                        }
+                        else
+                        {
+                            lbl_hata.Text = "Lütfen .jpg uzantılı resim ekleyiniz.";
+                        }
+
+                        
+                       
                     }
                     else
                     {

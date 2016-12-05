@@ -78,7 +78,7 @@
             <tr>
                 <td>Profil Fotografi</td>
                 <td class="auto-style3">
-                    <asp:FileUpload ID="FileUpload1" runat="server" style="margin-right: 33px" />
+                    <asp:FileUpload ID="fu_kayit" runat="server" style="margin-right: 33px" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
