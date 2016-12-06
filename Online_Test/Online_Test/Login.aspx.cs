@@ -30,18 +30,19 @@ namespace Online_Test
                 int say = (int)cmd1.ExecuteScalar();
                 if (say != 0) // giriş başarılı
                 {
-                    SqlConnection con2 = new SqlConnection(baglanti);
-                    SqlCommand com = new SqlCommand("select * from Uyeler where mail='" + txt_mail.Text + "' and parola='" + txt_parola.Text + "'",con2);
-                    con2.Open();
+                   
+                    SqlCommand com = new SqlCommand("select * from Uyeler where mail='" + txt_mail.Text + "' and parola='" + txt_parola.Text + "'",con);
+                    
                     SqlDataReader dr = com.ExecuteReader();
                     while(dr.Read())
                     {
                         string id = Convert.ToString(dr["uye_id"]);
                         // burada session ile id gönderilecek...
+                        lbl_hata.Text = id;
+
 
                     }
                     dr.Close();
-                    con2.Close();
                 }
                 else //giriş başarısız
                 {
