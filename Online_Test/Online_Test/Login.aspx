@@ -11,6 +11,7 @@
         }
         .auto-style3 {
             text-align: center;
+            position: center;
         }
         .auto-style4 {
             width: 100%;
@@ -47,7 +48,9 @@
                     <asp:TextBox ID="txt_mail" runat="server" Width="180px"></asp:TextBox>
                 </td>
                 <td class="auto-style9">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_kuladi" ErrorMessage="Lütfen Kullanıcı adını giriniz" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_mail" ErrorMessage="Lütfen Mail adresinizi giriniz" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txt_mail" ErrorMessage="Mail Uygun formatta değil" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -56,7 +59,7 @@
                     <asp:TextBox ID="txt_parola" runat="server" TextMode="Password" Width="180px"></asp:TextBox>
                 </td>
                 <td class="auto-style9">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_parola" ErrorMessage="Lütfen parolanızı girin" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_parola" ErrorMessage="Lütfen parolanızı giriniz" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>

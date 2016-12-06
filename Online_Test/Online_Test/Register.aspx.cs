@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
+using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using System.IO;
 using System.Configuration;
@@ -69,10 +70,11 @@ namespace Online_Test
                         string q = "insert into Uyeler(ad,soyad,mail,parola,profil_foto) values ('" + txt_ad.Text + "', '" + txt_soyad.Text + "', '" + txt_mail.Text + "', '" + txt_parola1.Text + "', '" + fotoisim + "')";
                         SqlCommand cmd = new SqlCommand(q, con);
                         cmd.ExecuteNonQuery();
-                        lbl_hata.Text = "Kayıdınız oluşturuldu.";
-                        /*
-                        ----Burada kullanici sayfasina yonlendirilecek! 
-                         */
+                        HtmlMeta meta = new HtmlMeta();
+                        meta.HttpEquiv = "Refresh";
+                        meta.Content = "5;url=Login.aspx";
+                        this.Page.Controls.Add(meta);
+                        lbl_hata.Text = "Kayıdınız oluşturuldu.<br> 5 saniye sonra yönlendirileceksiniz...";
 
                     }
                     else // parolalar uyuşmuyorsa

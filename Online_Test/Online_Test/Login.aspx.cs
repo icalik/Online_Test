@@ -28,14 +28,26 @@ namespace Online_Test
                 SqlCommand cmd1 = new SqlCommand(q1, con);
                 cmd1.ExecuteNonQuery();
                 int say = (int)cmd1.ExecuteScalar();
-                if (say != 0) 
+                if (say != 0) // giriş başarılı
                 {
-                    // giriş doğru
+                    SqlConnection con2 = new SqlConnection(baglanti);
+                    SqlCommand com = new SqlCommand("select * from Uyeler where mail='" + txt_mail.Text + "' and parola='" + txt_parola.Text + "'",con2);
+                    con2.Open();
+                    SqlDataReader dr = com.ExecuteReader();
+                    while(dr.Read())
+                    {
+                        string id = Convert.ToString(dr["uye_id"]);
+                        // burada session ile id gönderilecek...
+
+                    }
+                    dr.Close();
+                    con2.Close();
                 }
-                else
+                else //giriş başarısız
                 {
-                    lbl_hata.Text = "mail adresi ve parola uyuşmuyor <br> ütfen tekrar deneyiniz"
+                    lbl_hata.Text = "Mail adresi ve parola uyuşmuyor <br> lütfen tekrar deneyiniz";
                 }
             }
+        }
     }
 }
