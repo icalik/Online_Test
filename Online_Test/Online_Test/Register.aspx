@@ -9,6 +9,7 @@
         .auto-style1 {
             font-size: x-large;
             text-align: center;
+            position:center;
         }
         
         .auto-style2 {

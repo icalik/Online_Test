@@ -42,9 +42,9 @@
     
         <strong><span class="auto-style2">Üye Girişi</span></strong><table class="auto-style4">
             <tr>
-                <td class="auto-style6">Kullanıcı adı</td>
+                <td class="auto-style6">Mail adresi </td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="txt_kuladi" runat="server" Width="180px"></asp:TextBox>
+                    <asp:TextBox ID="txt_mail" runat="server" Width="180px"></asp:TextBox>
                 </td>
                 <td class="auto-style9">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_kuladi" ErrorMessage="Lütfen Kullanıcı adını giriniz" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -68,7 +68,9 @@
             </tr>
             <tr>
                 <td class="auto-style5">&nbsp;</td>
-                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style8">
+                    <asp:Label ID="lbl_hata" runat="server"></asp:Label>
+                </td>
                 <td class="auto-style9">&nbsp;</td>
             </tr>
         </table>

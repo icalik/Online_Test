@@ -22,13 +22,13 @@ namespace Online_Test {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_kuladi control.
+        /// txt_mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_kuladi;
+        protected global::System.Web.UI.WebControls.TextBox txt_mail;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -65,5 +65,14 @@ namespace Online_Test {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_girisyap;
+        
+        /// <summary>
+        /// lbl_hata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_hata;
     }
 }
