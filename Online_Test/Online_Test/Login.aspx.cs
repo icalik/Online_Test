@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using System.Web.Configuration;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -38,7 +39,12 @@ namespace Online_Test
                     {
                         string id = Convert.ToString(dr["uye_id"]);
                         // burada session ile id gönderilecek...
-                        lbl_hata.Text = id;
+                        Session["id"] = id;
+                        HtmlMeta meta = new HtmlMeta();
+                        meta.HttpEquiv = "Refresh";
+                        meta.Content = "2;url=Login.aspx";
+                        this.Page.Controls.Add(meta);
+                        lbl_hata.Text = "Giriş başarılı <br> Yönlendiriliyorsunuz...";
 
 
                     }
