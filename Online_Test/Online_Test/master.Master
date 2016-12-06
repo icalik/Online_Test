@@ -7,13 +7,35 @@
     
     <title></title>
     <script src="Scripts/bootstrap.js" type="text/javascript"></script>
-    <script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script>
-     <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+   
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="Scripts/jquery-3.1.1.js" type="text/javascript"></script>
 
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+
+    <!--JQWidget-->
+
+    
+
+    <link rel="stylesheet" href="Content/JQWidgets/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxexpander.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxvalidator.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxbuttons.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxcheckbox.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/globalization/globalize.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxcalendar.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxdatetimeinput.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxmaskedinput.js"></script> 
+    <script type="text/javascript" src="Scripts/jqwidgets/jqxinput.js"></script> 
+   
+
+
+
+
+    <!--JQWidget-->
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>
@@ -66,7 +88,7 @@
         
        <div class="container">
            <div class="row">
-                <div class="col-xs-12 col-md-9" style="background-color:aqua">
+                <div class="col-xs-12 col-md-9">
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         <!--İçerik-->
