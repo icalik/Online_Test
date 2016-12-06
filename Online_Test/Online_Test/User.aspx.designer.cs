@@ -13,21 +13,21 @@ namespace Online_Test {
     public partial class User {
         
         /// <summary>
-        /// form1 control.
+        /// lbl_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lbl_id;
         
         /// <summary>
-        /// lbl_bilgi control.
+        /// lbl_ad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_bilgi;
+        protected global::System.Web.UI.WebControls.Label lbl_ad;
     }
 }

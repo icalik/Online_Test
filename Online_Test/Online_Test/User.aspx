@@ -1,18 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="Online_Test.User" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="Online_Test.User" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Label ID="lbl_id" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="lbl_ad" runat="server" Text="Label"></asp:Label>
+    <script type="text/javascript">
 
-<!DOCTYPE html>
+        $(document).ready(function () {
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        
-        <asp:Label ID="lbl_bilgi" runat="server"></asp:Label>
-        
-    </div>
-    </form>
-</body>
-</html>
+            $('#giris_btn').html("KULLANICI");
+            $('#giris_btn').attr({'href': "./Default.aspx"});
+        });
+
+    </script>
+    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+
+</asp:Content>

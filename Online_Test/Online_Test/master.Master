@@ -9,7 +9,7 @@
     <script src="Scripts/bootstrap.js" type="text/javascript"></script>
    
     <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
-    <script src="Scripts/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script>
 
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -20,16 +20,9 @@
     
 
     <link rel="stylesheet" href="Content/JQWidgets/jqx.base.css" type="text/css" />
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxexpander.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxvalidator.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxbuttons.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxcheckbox.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/globalization/globalize.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxcalendar.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxdatetimeinput.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxmaskedinput.js"></script> 
-    <script type="text/javascript" src="Scripts/jqwidgets/jqxinput.js"></script> 
+     
+    <script type="text/javascript" src="Scripts/jqwidgets/jqx-all.js"></script>
+    
    
 
 
@@ -78,8 +71,8 @@
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="Login.aspx">Giriş Yap</a></li>
-        <li><a href="Register.aspx">Kayıt Ol</a></li>
+        <li><a id="giris_btn" href="Login.aspx">Giriş Yap</a></li>
+        <li><a id="kayit_btn" href="Register.aspx">Kayıt Ol</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
