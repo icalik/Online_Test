@@ -130,15 +130,6 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.FileUpload fu_kayit;
         
         /// <summary>
-        /// lbl_hata control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_hata;
-        
-        /// <summary>
         /// btn_uyeol control.
         /// </summary>
         /// <remarks>
@@ -146,5 +137,14 @@ namespace Online_Test {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_uyeol;
+        
+        /// <summary>
+        /// lbl_hata control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_hata;
     }
 }
