@@ -174,7 +174,7 @@
             <div class="row">
               <div class="col-md-4"></div>
               <div class="col-md-4">
-                  <div class="form-group" style="color:red;">
+                  <div class="form-group" style="color:red; text-align:center;">
                     <h4><label>
                         <asp:Label ID="lbl_hata" runat="server"></asp:Label> 
                        </label> </h4>
