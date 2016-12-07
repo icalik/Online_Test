@@ -9,7 +9,9 @@
         $(document).ready(function () {
 
             $('#giris_btn').html("KULLANICI");
-            $('#giris_btn').attr({'href': "./Default.aspx"});
+            $('#giris_btn').attr({ 'href': "./Default.aspx" });
+            $('#kayit_btn').html("Çıkış Yap");
+            $('#kayit_btn').attr({'href' : "./LogOut.aspx"});
         });
 
     </script>
