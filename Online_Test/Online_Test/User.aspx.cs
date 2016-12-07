@@ -96,33 +96,13 @@ namespace Online_Test
         }
         protected void btn_konu_ekle_kaydet_Click(object sender, EventArgs e)
         {
-            string baglanti = WebConfigurationManager.ConnectionStrings["OnlineTestConnectionString"].ConnectionString;
-            SqlConnection con = new SqlConnection(baglanti);
-            con.Open();
-            if (con.State == System.Data.ConnectionState.Open)
-            {
-                string q1 = "select count(*) from Konular where konu_adi='" + (txt_konu_ad.Text).ToUpper() + "'";
-                SqlCommand cmd1 = new SqlCommand(q1, con);
-                cmd1.ExecuteNonQuery();
-                int say = (int)cmd1.ExecuteScalar();
-                if (say != 0) // konu adı sql karşılaştırması yapılıyor
-                {
-                    lbl_konu_ekle_hata.Text = "Konu adı bulunuyor!";
-                }
-                else
-                { // aynı konu adı tabloda bulunmuyorsa
-                    string q = "insert into Konular(konu_adi,ekleyen) values ('" + (txt_konu_ad.Text).ToUpper() + "', '" + id + "')";
-                    SqlCommand cmd = new SqlCommand(q, con);
-                    cmd.ExecuteNonQuery();
-                    lbl_konu_ekle_hata.Text = "Konu başarıyla eklendi";
-                }
-
-            }
+            lbl_konu_ekle_hata.Text = "butona basıldı";
         }
 
         protected void btn_konu_ekle_Click(object sender, EventArgs e)
         {
 
         }
+        
     }
 }

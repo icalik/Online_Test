@@ -204,7 +204,7 @@
               <div class="col-md-4">
                   <h5>
                       <label>
-                          <asp:Label ID="lbl_konu_ekle_hata" runat="server" Text=""></asp:Label>
+                          <asp:Label ID="lbl_konu_ekle_hata" runat="server" Text="Hata"></asp:Label>
                           <br />
                           <br />
                       </label> 
@@ -215,8 +215,9 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <asp:Button ID="btn_konu_ekle_kaydet" runat="server" Text="Değişiklikleri Kaydet" class="btn btn-primary"  OnClick="btn_konu_ekle_kaydet_Click"/>
-        </div>
+            <asp:Button ID="btn_konu_ekle_kaydet" runat="server" Text="Konu Kaydet"   OnClick="btn_konu_ekle_kaydet_Click"/>
+            <!-- İsmet buradaki buton click olayını çalıştırmıyor bakar mısın -->
+             </div>
       </div>
     </div>
   </div>
