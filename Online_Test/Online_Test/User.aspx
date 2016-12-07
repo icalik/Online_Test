@@ -24,10 +24,11 @@
     </script>
 
    <div class="container">
-       <asp:Button ID="btn_profil_duzenle" runat="server" Text="Button" OnClick="btn_profil_duzenle_Click" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_profil_duzenle" />
+       <asp:Button ID="btn_profil_duzenle" runat="server" Text="Profil Düzenle" OnClick="btn_profil_duzenle_Click" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_profil_duzenle" />
+       <asp:Button ID="btn_konu_ekle" runat="server" Text="Konu Ekle" OnClick="btn_konu_ekle_Click" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal_konu_ekle" />
  
        
-  <!-- Modal -->
+  <!-- Modal Profil Düzenle -->
   <div class="modal fade" id="modal_profil_duzenle" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -156,6 +157,70 @@
       </div>
     </div>
   </div>
+       <!-- Modal Profil Düzenle kapanış-->
+
+       <!-- Modal Konu Ekle -->
+  <div class="modal fade" id="modal_konu_ekle" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Konu Ekle</h4>
+        </div>
+        <div class="modal-body">
+            <!-- Konu ekle -->
+            <div class="row">
+              <div class="col-md-4"  style="text-align:center;">
+                 <h4><label>Konu Adı :</label> </h4>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-comment"></span>
+                    </span>
+                      <asp:TextBox ID="txt_konu_ad" runat="server"  CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <h5>
+                      <label>
+                          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txt_konu_ad" ErrorMessage="Lütfen konu adını boş bırakmayınız" ForeColor="Red"></asp:RequiredFieldValidator>
+                          <br />
+                          <br />
+                      </label> 
+                  </h5>
+              </div>
+            </div>
+            <!-- Konu ekle kapanış -->
+
+              <!-- Hata mesajı -->
+            <div class="row">
+              <div class="col-md-4"  style="text-align:center;">
+                 
+              </div>
+              <div class="col-md-4">
+                  
+              </div>
+              <div class="col-md-4">
+                  <h5>
+                      <label>
+                          <asp:Label ID="lbl_konu_ekle_hata" runat="server" Text=""></asp:Label>
+                          <br />
+                          <br />
+                      </label> 
+                  </h5>
+              </div>
+            </div>
+            <!-- Hata mesajı kapanış -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <asp:Button ID="btn_konu_ekle_kaydet" runat="server" Text="Değişiklikleri Kaydet" class="btn btn-primary"  OnClick="btn_konu_ekle_kaydet_Click"/>
+        </div>
+      </div>
+    </div>
+  </div>
+       <!-- Modal Konu ekle Kapanış--> 
 </div>
 
 
