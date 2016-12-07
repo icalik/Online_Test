@@ -29,9 +29,9 @@ namespace Online_Test
 
                     while (dr.Read())
                     {
-                        lbl_ad.Text = Convert.ToString(dr["ad"]);
-
-
+                        lbl_ad.Text = "Hoşgeldin " + Convert.ToString(dr["ad"]);
+                        lbl_profil_ad.Text = "!@#";
+                        lbl_profil_soyad.Text = "Dnemem";
                     }
                     dr.Close();
                 }
@@ -47,5 +47,6 @@ namespace Online_Test
                 
             }
         }
+
     }
 }
