@@ -31,58 +31,13 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.Label lbl_ad;
         
         /// <summary>
-        /// lbl_profil_ad control.
+        /// btn_profil_duzenle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profil_ad;
-        
-        /// <summary>
-        /// lbl_profil_soyad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profil_soyad;
-        
-        /// <summary>
-        /// lbl_profil_mail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profil_mail;
-        
-        /// <summary>
-        /// lbl_profil_yetki control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profil_yetki;
-        
-        /// <summary>
-        /// lbl_profil_uyeolmatarihi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profil_uyeolmatarihi;
-        
-        /// <summary>
-        /// lbl_profil_pfoto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_profil_pfoto;
+        protected global::System.Web.UI.WebControls.Button btn_profil_duzenle;
         
         /// <summary>
         /// txt_profil_ad control.
@@ -103,13 +58,13 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// txt_soyad control.
+        /// txt_profil_soyad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_soyad;
+        protected global::System.Web.UI.WebControls.TextBox txt_profil_soyad;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -121,40 +76,13 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// txt_mail control.
+        /// txt_profil_parola1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_mail;
-        
-        /// <summary>
-        /// RequiredFieldValidator5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
-        /// <summary>
-        /// RegularExpressionValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
-        /// <summary>
-        /// txt_parola1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_parola1;
+        protected global::System.Web.UI.WebControls.TextBox txt_profil_parola1;
         
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -175,13 +103,13 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
-        /// txt_parola2 control.
+        /// txt_profil_parola2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_parola2;
+        protected global::System.Web.UI.WebControls.TextBox txt_profil_parola2;
         
         /// <summary>
         /// RequiredFieldValidator4 control.
@@ -193,13 +121,13 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
-        /// fu_kayit control.
+        /// fu_profil_kayit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fu_kayit;
+        protected global::System.Web.UI.WebControls.FileUpload fu_profil_kayit;
         
         /// <summary>
         /// btn_profil_kaydet control.

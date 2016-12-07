@@ -12,6 +12,8 @@ namespace Online_Test
     public partial class User : System.Web.UI.Page
     {
         string id;
+        private string ad;
+        private string soyad;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -31,12 +33,17 @@ namespace Online_Test
                     while (dr.Read())
                     {
                         lbl_ad.Text = "Hoşgeldin " + Convert.ToString(dr["ad"]);
-                        lbl_profil_ad.Text = Convert.ToString(dr["ad"]);
-                        lbl_profil_soyad.Text = Convert.ToString(dr["soyad"]);
-                        lbl_profil_mail.Text = Convert.ToString(dr["mail"]);
-                        lbl_profil_yetki.Text = Convert.ToString(dr["yetki"]);
-                        lbl_profil_pfoto.Text = Convert.ToString(dr["profil_foto"]);
-                        lbl_profil_uyeolmatarihi.Text = Convert.ToString(dr["uye_olma_tarihi"]);
+                        /* lbl_profil_ad.Text = Convert.ToString(dr["ad"]);
+                         lbl_profil_soyad.Text = Convert.ToString(dr["soyad"]);
+                         lbl_profil_mail.Text = Convert.ToString(dr["mail"]);
+                         lbl_profil_yetki.Text = Convert.ToString(dr["yetki"]);
+                         lbl_profil_pfoto.Text = Convert.ToString(dr["profil_foto"]);
+                         lbl_profil_uyeolmatarihi.Text = Convert.ToString(dr["uye_olma_tarihi"]);
+                         */
+                         ad = Convert.ToString(dr["ad"]).Trim();
+                         soyad = Convert.ToString(dr["soyad"]).Trim();
+                       
+
                     }
                     dr.Close();
                 }
@@ -50,7 +57,7 @@ namespace Online_Test
 
 
 
-            }
+            }   
         }
 
         protected void btn_profil_kaydet_Click(object sender, EventArgs e)
@@ -61,10 +68,12 @@ namespace Online_Test
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
+                ad = txt_profil_ad.Text;
+                soyad = txt_profil_soyad.Text;
                 try
                 {
-                    
-                    string q2 = "update Uyeler set ad='" + txt_profil_ad.Text + "'where uye_id='" + id + "'";
+                   
+                    string q2 = "update Uyeler set ad='" + ad + "', soyad='"+ soyad + "', parola='" + txt_profil_parola1.Text + "' where uye_id='" + id + "'";
 
                     SqlCommand com1 = new SqlCommand(q2, con);
                     com1.ExecuteNonQuery();
@@ -77,6 +86,13 @@ namespace Online_Test
 
                 }
             }
+        }
+
+        protected void btn_profil_duzenle_Click(object sender, EventArgs e)
+        {
+            txt_profil_ad.Text = ad;
+            txt_profil_soyad.Text = soyad;
+
         }
     }
 }
