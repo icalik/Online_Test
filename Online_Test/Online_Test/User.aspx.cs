@@ -19,19 +19,32 @@ namespace Online_Test
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                id = Session["id"].ToString();
-                string q = "select * from Uyeler where uye_id=" + id + "";
-
-                SqlCommand com = new SqlCommand(q, con);
-                SqlDataReader dr = com.ExecuteReader();
-
-                while (dr.Read())
+                try
                 {
-                    lbl_ad.Text = Convert.ToString(dr["ad"]);
+                    id = Session["id"].ToString();
+                    string q = "select * from Uyeler where uye_id=" + id + "";
+
+                    SqlCommand com = new SqlCommand(q, con);
+                    SqlDataReader dr = com.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        lbl_ad.Text = Convert.ToString(dr["ad"]);
 
 
+                    }
+                    dr.Close();
                 }
-                dr.Close();
+                catch (Exception)
+                {
+                    lbl_ad.Text = "Session Yok Giris Yapiniz!";
+                    lbl_id.Text = "";
+                    
+                }
+
+
+                
+                
             }
         }
     }
