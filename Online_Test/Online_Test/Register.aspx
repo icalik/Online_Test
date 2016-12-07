@@ -21,8 +21,8 @@
      
       
     	<div class="container" style="max-width:900px;">
-            <div class="row">
-               <center><h3><label>Kayıt ol</label></h3></center> 
+            <div class="row" style="text-align:center">
+               <h3><label>Kayıt ol</label></h3>
             </div>
             <!-- Ad  -->
 			<div class="row">
@@ -31,8 +31,8 @@
               </div>
               <div class="col-md-4">
                   <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2">
-                        <div class="glyphicon glyphicon-user"></div>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
                     </span>
                       <asp:TextBox ID="txt_ad" runat="server"  CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
                   </div>
@@ -55,8 +55,8 @@
               </div>
               <div class="col-md-4">
                   <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2">
-                        <div class="glyphicon glyphicon-arrow-right"></div>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-arrow-right"></span>
                     </span>
                       <asp:TextBox ID="txt_soyad" runat="server"  CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
                   </div>
@@ -79,8 +79,8 @@
               </div>
               <div class="col-md-4">
                   <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2">
-                        <div class="glyphicon glyphicon-envelope"></div>
+                    <span class="input-group-addon" >
+                        <span class="glyphicon glyphicon-envelope"></span>
                     </span>
                       <asp:TextBox ID="txt_mail" runat="server"  CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
                   </div>
@@ -103,8 +103,8 @@
               </div>
               <div class="col-md-4">
                   <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2">
-                        <div class="glyphicon glyphicon-lock"></div>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
                     </span>
                       <asp:TextBox ID="txt_parola1" runat="server"  CssClass="form-control" aria-describedby="sizing-addon2" TextMode="Password"></asp:TextBox>
                   </div>
@@ -129,7 +129,7 @@
               <div class="col-md-4">
                   <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">
-                        <div class="glyphicon glyphicon-lock"></div>
+                        <span class="glyphicon glyphicon-lock"></span>
                     </span>
                       <asp:TextBox ID="txt_parola2" runat="server"  CssClass="form-control" aria-describedby="sizing-addon2" TextMode="Password"></asp:TextBox>
                   </div>
