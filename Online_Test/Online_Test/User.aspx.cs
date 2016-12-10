@@ -14,6 +14,7 @@ namespace Online_Test
         string id;
         private string ad;
         private string soyad;
+        private string konu_ad;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -94,15 +95,21 @@ namespace Online_Test
             txt_profil_soyad.Text = soyad;
 
         }
-        protected void btn_konu_ekle_kaydet_Click(object sender, EventArgs e)
-        {
-            lbl_konu_ekle_hata.Text = "butona basıldı";
-        }
 
         protected void btn_konu_ekle_Click(object sender, EventArgs e)
         {
-
+            txt_profil_ad.Text = ad;
+            txt_profil_soyad.Text = soyad;
         }
-        
+
+        protected void btn_konu_ekle_kaydet_Click(object sender, EventArgs e)
+        {
+            Label1.Text = "ISMET";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Label1.Text = ad;
+        }
     }
 }
