@@ -75,5 +75,10 @@ namespace Online_Test
         {
             Response.Redirect("AddTest.aspx");
         }
+
+        protected void btn_soru_ekle_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddQuestion.aspx");
+        }
     }
 }

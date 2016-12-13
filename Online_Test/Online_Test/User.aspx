@@ -31,6 +31,10 @@
 
   
 
+        <asp:Button ID="btn_soru_ekle" runat="server" OnClick="btn_soru_ekle_Click" Text="Soru Ekle" />
+
+  
+
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">

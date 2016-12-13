@@ -40,13 +40,40 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// btn_profil_duzenle_kaydet control.
+        /// ddl_soru_sayisi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_profil_duzenle_kaydet;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_soru_sayisi;
+        
+        /// <summary>
+        /// ddl_sik_sayisi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_sik_sayisi;
+        
+        /// <summary>
+        /// ddl_sure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_sure;
+        
+        /// <summary>
+        /// btn_test_ekle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_test_ekle;
         
         /// <summary>
         /// lbl_uyari control.

@@ -11,7 +11,8 @@
             <h3>
                 <label>Test Ekle</label></h3>
         </div>
-        <!-- Konu ekle  -->
+
+        <!-- Konu Seç  -->
         <div class="row">
             <div class="col-md-4" style="text-align: center;">
                 <h4>
@@ -20,12 +21,25 @@
             </div>
             <div class="col-md-4">
                 <div class="input-group">
-                   <asp:DropDownList ID="ddl_konu" runat="server" Height="58px" Width="162px">
+                   <asp:DropDownList ID="ddl_konu" runat="server" Width="162px">
     </asp:DropDownList>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="input-group">
+                
+            </div>
+        </div>
+
+     
+         <!-- Test ekle  -->
+        <div class="row">
+            <div class="col-md-4" style="text-align: center;">
+                <h4>
+                    <label>Testin ismini giriniz : </label>
+                </h4>
+            </div>
+            <div class="col-md-4">
+                  <div class="input-group">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-user"></span>
                     </span>
@@ -33,7 +47,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h5>
+               <h5>
                     <label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_test_adi" ErrorMessage="Lütfen test adı giriniz!" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
@@ -43,7 +57,73 @@
             </div>
         </div>
 
-       
+         <!-- Soru Sayısı Seç  -->
+        <div class="row">
+            <div class="col-md-4" style="text-align: center;">
+                <h4>
+                    <label>Soru Sayısı Seçin : </label>
+                </h4>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                   <asp:DropDownList ID="ddl_soru_sayisi" runat="server" Width="162px">
+                        <asp:ListItem Value="2"></asp:ListItem>
+                        <asp:ListItem Value="5"></asp:ListItem>
+                        <asp:ListItem Value="10"></asp:ListItem>
+                        <asp:ListItem Value="15"></asp:ListItem>
+                        <asp:ListItem Value="20"></asp:ListItem>
+                   </asp:DropDownList>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+               
+            </div>
+        </div>
+
+        <!-- Soruların Şık Sayısı Seç  -->
+        <div class="row">
+            <div class="col-md-4" style="text-align: center;">
+                <h4>
+                    <label>Soruların Şık Sayısını Seçin : </label>
+                </h4>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                   <asp:DropDownList ID="ddl_sik_sayisi" runat="server" Width="162px">
+                       <asp:ListItem Value="3"></asp:ListItem>
+                       <asp:ListItem Value="4"></asp:ListItem>
+                       <asp:ListItem Value="5"></asp:ListItem>
+    </asp:DropDownList>
+                </div>
+            </div>
+            <div class="col-md-4">
+               
+            </div>
+        </div>
+
+        <!-- Süre Seç  -->
+        <div class="row">
+            <div class="col-md-4" style="text-align: center;">
+                <h4>
+                    <label>Test süresini belirleyin : </label>
+                </h4>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <asp:DropDownList ID="ddl_sure" runat="server" Width="162px">
+                        <asp:ListItem Value="5">5 dk</asp:ListItem>
+                        <asp:ListItem Value="10">10 dk</asp:ListItem>
+                        <asp:ListItem Value="15">15 dk</asp:ListItem>
+                        <asp:ListItem Value="20">20 dk</asp:ListItem>
+                        <asp:ListItem Value="25">25 dk</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+            </div>
+            <div class="col-md-4">
+               
+            </div>
+        </div>
 
         <!-- Buton -->
         <div class="row">
@@ -51,10 +131,7 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <asp:Button ID="btn_profil_duzenle_kaydet" runat="server" OnClick="btn_profil_duzenle_kaydet_Click" Text="Kaydet" CssClass="btn btn-warning" />
-
-
-
+                    <asp:Button ID="btn_test_ekle" runat="server" OnClick="btn_test_ekle_Click" Text="Soruları Eklemeye Başla" CssClass="btn btn-warning" />
                 </div>
             </div>
             <div class="col-md-4">
