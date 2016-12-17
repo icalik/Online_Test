@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace Online_Test
@@ -12,6 +13,9 @@ namespace Online_Test
     public partial class AddQuestion : System.Web.UI.Page
     {
         string id, test_adi, konu_id, soru_sayisi, test_suresi, ekleyen_id, son_eklenen_id;
+        int SoruBitis;
+      
+
         public System.Web.UI.HtmlControls.HtmlGenericControl cerceve;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,42 +47,34 @@ namespace Online_Test
                                     "Test süresi = " + test_suresi + "<br>" +
                                     "Ekleyen id = " + ekleyen_id;
 
-                int soruSayisi = Convert.ToInt32(soru_sayisi);
-
-                cerceve = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
-                cerceve.ID = "cerceve";
-
-                for (int i = 1; i <= soruSayisi; i++)
-                {
-
-                    soru_ekle(i);
-                }
+                 SoruBitis = Convert.ToInt32(Session["SoruSayac"]);
+                
+                
 
                 
             }
 
         }
 
-        
-        private void soru_ekle(int soru_sayisi)
+        protected void btn_gonder_Click(object sender, EventArgs e)
         {
-            
-            System.Web.UI.HtmlControls.HtmlGenericControl soru = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
-            soru.ID = "panel" + soru_sayisi.ToString();
-            soru.Style.Add(HtmlTextWriterStyle.BackgroundColor, "Yellow");
-            soru.InnerHtml = 
-                "Soru "+ soru_sayisi +"<input id=soru" + soru_sayisi + 
-                "> <br> 1.Cevap <input id=cevap1"+soru_sayisi+
-                "> <br>  2.Cevap <input id=cevap2"+soru_sayisi+
-                "> <br>  3.Cevap <input id=cevap3"+soru_sayisi+
-                "> <br>  4.Cevap <input id=cevap4" + soru_sayisi+
-                "> <br>  Doğru Cevap <input id=cevap5" +soru_sayisi+
-                "> <br>";
-            cerceve.Controls.Add(soru);
-            Controls.Add(cerceve);
-           
-            
+            if (Convert.ToInt32(Session["sayac"]) < SoruBitis)
+            {
+                
+                HtmlMeta meta = new HtmlMeta();
+                meta.HttpEquiv = "Refresh";
+                meta.Content = "1;url=AddQuestion.aspx";
+                lbl_soru_hata.Text = "Tamam";
+                Page.Controls.Add(meta);
+                Session["sayac"] = Convert.ToInt32(Session["sayac"]) + 1;
+            }
+            else
+            {
+                lbl_soru_hata.Text = "Test ekleme işlemi bitti";
+            }
         }
-        
+
+
     }
+   
 }

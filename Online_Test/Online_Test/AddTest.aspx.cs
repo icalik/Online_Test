@@ -63,6 +63,8 @@ namespace Online_Test
                         string q = "insert into Testler(test_adi,konu_id,soru_sayisi,test_suresi,ekleyen_id) values ('" + txt_test_adi.Text + "', '" + secilen_konu + "', '" + soru_sayisi + "', '" + test_suresi + "', '" + id + "')";
                         SqlCommand cmd = new SqlCommand(q, con);
                         cmd.ExecuteNonQuery();
+                        Session["SoruSayac"] = soru_sayisi;
+                        Session["sayac"] = 0;
                         lbl_uyari.Text = "Kaydedildi!";
                         HtmlMeta meta = new HtmlMeta();
                         meta.HttpEquiv = "Refresh";
