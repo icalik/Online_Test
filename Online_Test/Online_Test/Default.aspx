@@ -7,6 +7,4 @@
     <asp:Button ID="btn_gir" runat="server" Text="Gir" OnClick="btn_gir_Click" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-   
-    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
 </asp:Content>
