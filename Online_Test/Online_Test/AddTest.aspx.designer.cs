@@ -49,15 +49,6 @@ namespace Online_Test {
         protected global::System.Web.UI.WebControls.DropDownList ddl_soru_sayisi;
         
         /// <summary>
-        /// ddl_sik_sayisi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_sik_sayisi;
-        
-        /// <summary>
         /// ddl_sure control.
         /// </summary>
         /// <remarks>

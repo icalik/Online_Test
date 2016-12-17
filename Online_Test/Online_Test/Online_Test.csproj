@@ -102,6 +102,7 @@
     <Content Include="AddTopic.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="EditProfile.aspx" />
+    <Content Include="jsonToDB.asmx" />
     <Content Include="Login.aspx" />
     <Content Include="LogOut.aspx" />
     <Content Include="packages.config">
@@ -183,6 +184,10 @@
     <Compile Include="EditProfile.aspx.designer.cs">
       <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="jsonToDB.asmx.cs">
+      <DependentUpon>jsonToDB.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +224,7 @@
     <Compile Include="Register_Eski.aspx.designer.cs">
       <DependentUpon>Register_Eski.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sorular.cs" />
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -41,7 +41,7 @@ namespace Online_Test
                         Session["id"] = id;
                         HtmlMeta meta = new HtmlMeta();
                         meta.HttpEquiv = "Refresh";
-                        meta.Content = "2;url=User.aspx";
+                        meta.Content = "0;url=User.aspx";
                         this.Page.Controls.Add(meta);
                         lbl_hata.Text = "Giriş başarılı <br> Yönlendiriliyorsunuz...";
 

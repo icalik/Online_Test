@@ -78,7 +78,8 @@
                     </div>
                     <div class="col-xs-6 col-md-3" style="background-color: mediumvioletred">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                            <!--Yan menu-->
+                           <!--Yan menü-->
+                            
                         </asp:ContentPlaceHolder>
                     </div>
                 </div>

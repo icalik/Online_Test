@@ -81,27 +81,7 @@
             </div>
         </div>
 
-        <!-- Soruların Şık Sayısı Seç  -->
-        <div class="row">
-            <div class="col-md-4" style="text-align: center;">
-                <h4>
-                    <label>Soruların Şık Sayısını Seçin : </label>
-                </h4>
-            </div>
-            <div class="col-md-4">
-                <div class="input-group">
-                   <asp:DropDownList ID="ddl_sik_sayisi" runat="server" Width="162px">
-                       <asp:ListItem Value="3"></asp:ListItem>
-                       <asp:ListItem Value="4"></asp:ListItem>
-                       <asp:ListItem Value="5"></asp:ListItem>
-    </asp:DropDownList>
-                </div>
-            </div>
-            <div class="col-md-4">
-               
-            </div>
-        </div>
-
+        
         <!-- Süre Seç  -->
         <div class="row">
             <div class="col-md-4" style="text-align: center;">
