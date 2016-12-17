@@ -76,7 +76,9 @@
                         </asp:ContentPlaceHolder>
 
                     </div>
-                    <div class="col-xs-6 col-md-3" style="background-color: mediumvioletred">
+                    <div class="col-xs-6 col-md-3" style="background-color: cyan; height:auto;" >
+                        <span style="color:black; font-size:25px;">Son Ekenen Konular</span> <br/>
+                        
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                            <!--Yan menü-->
                             
