@@ -1,8 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="SelectTopic.aspx.cs" Inherits="Online_Test.SolveTest" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
 
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
+
+
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
     <div class="container" style="max-width: 900px;">
         <div class="row" style="text-align: center">
             <h3>
@@ -18,16 +36,15 @@
             </div>
             <div class="col-md-4">
                 <div class="input-group">
-                   <asp:DropDownList ID="ddl_konu" runat="server" Width="162px" AutoPostBack="True" OnSelectedIndexChanged="ddl_konu_SelectedIndexChanged">
-                   </asp:DropDownList>
+                    <asp:DropDownList ID="ddl_konu" runat="server" Width="162px" AutoPostBack="True" OnSelectedIndexChanged="ddl_konu_SelectedIndexChanged">
+                    </asp:DropDownList>
                 </div>
             </div>
             <div class="col-md-4">
-                
             </div>
         </div>
 
-         <!-- Test Seç  -->
+        <!-- Test Seç  -->
         <div class="row">
             <div class="col-md-4" style="text-align: center;">
                 <h4>
@@ -36,12 +53,11 @@
             </div>
             <div class="col-md-4">
                 <div class="input-group">
-                   <asp:DropDownList ID="dll_test_sec" runat="server" Width="162px" AutoPostBack="True">
-                   </asp:DropDownList>
+                    <asp:DropDownList ID="dll_test_sec" runat="server" Width="162px" AutoPostBack="True">
+                    </asp:DropDownList>
                 </div>
             </div>
             <div class="col-md-4">
-                
             </div>
         </div>
         <!-- Buton -->
@@ -75,7 +91,7 @@
         </div>
 
 
-        </div>
+    </div>
 
 
 

@@ -1,8 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="AddTopic.aspx.cs" Inherits="Online_Test.AddTopic" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
 
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
+
+
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
     <div class="container" style="max-width: 900px;">
         <div class="row" style="text-align: center">
             <h3>
@@ -40,7 +58,7 @@
             </div>
         </div>
 
-       
+
 
         <!-- Buton -->
         <div class="row">

@@ -3,25 +3,46 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
 
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
+
+
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
     <div class="container" style="max-width: 900px;">
-         <!-- başlık -->
+        <!-- başlık -->
         <div class="row">
-                <h3><label>
+            <h3>
+                <label>
                     <asp:Label ID="lbl_test_adi" runat="server" Text=""></asp:Label>
-                </label></h3>
+                </label>
+            </h3>
         </div>
-        
+
     </div>
-   
+
     <div class="container" style="max-width: 900px; padding-top: 30px;">
         <!-- başlık -->
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-3" style="text-align:center">
-                <h3><label>
-                   <center><asp:Label ID="lbl_baslik" runat="server" Text=""></asp:Label></center> 
-                </label></h3>
+            <div class="col-md-3" style="text-align: center">
+                <h3>
+                    <label>
+                        <center><asp:Label ID="lbl_baslik" runat="server" Text=""></asp:Label></center>
+                    </label>
+                </h3>
             </div>
             <div class="col-md-3"></div>
         </div>
@@ -73,7 +94,7 @@
                 </h5>
             </div>
         </div>
-         <!-- cevap 2  -->
+        <!-- cevap 2  -->
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
                 <h4>
@@ -96,7 +117,7 @@
                 </h5>
             </div>
         </div>
-         <!-- cevap 3  -->
+        <!-- cevap 3  -->
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
                 <h4>
@@ -120,7 +141,7 @@
             </div>
         </div>
 
-         <!-- Cevap 4  -->
+        <!-- Cevap 4  -->
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
                 <h4>
@@ -144,8 +165,8 @@
             </div>
         </div>
 
-        
-         <!-- Cevap 5  -->
+
+        <!-- Cevap 5  -->
         <div class="row">
             <div class="col-md-3" style="text-align: right;">
                 <h4>
@@ -201,7 +222,7 @@
     </div>
 
 
-    
+
 
 
 </asp:Content>

@@ -1,30 +1,52 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="Testing.aspx.cs" Inherits="Online_Test.Testing" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
 
 
-     <div class="container" style="max-width: 900px;">
-         <!-- başlık -->
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
+
+    <div class="container" style="max-width: 900px;">
+        <!-- başlık -->
         <div class="row">
-                <h3><label>
+            <h3>
+                <label>
                     <asp:Label ID="lbl_test_adi" runat="server" Text=""></asp:Label>
-                </label></h3>
+                </label>
+            </h3>
         </div>
-        
+
     </div>
-   
+
     <div class="container" style="max-width: 900px; padding-top: 30px;">
         <!-- başlık -->
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-3" style="text-align:center">
-                <h3><label>
-                   <center><asp:Label ID="lbl_baslik" runat="server" Text=""></asp:Label></center> 
-                    <br />
-                    <asp:Label ID="lbl_deneme" runat="server" Text=""></asp:Label>
-                </label></h3>
+            <div class="col-md-3" style="text-align: center">
+                <h3>
+                    <label>
+                        <center><asp:Label ID="lbl_baslik" runat="server" Text=""></asp:Label></center>
+                        <br />
+                        <asp:Label ID="lbl_deneme" runat="server" Text=""></asp:Label>
+                    </label>
+                </h3>
             </div>
             <div class="col-md-3"></div>
         </div>
@@ -37,7 +59,7 @@
                 </h4>
             </div>
             <div class="col-md-6">
-                    <asp:Label ID="lbl_soru" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lbl_soru" runat="server" Text=""></asp:Label>
             </div>
             <div class="col-md-3">
             </div>
@@ -45,8 +67,7 @@
 
         <!-- cevap 1 -->
         <div class="row">
-            <div class="col-md-3" >
-                  
+            <div class="col-md-3">
             </div>
             <div class="col-md-6" style="text-align: left;">
                 <asp:RadioButtonList ID="rb_cevaplar" runat="server"></asp:RadioButtonList>
@@ -54,7 +75,7 @@
             <div class="col-md-3">
             </div>
         </div>
-        
+
 
         <!-- Buton -->
         <div class="row">

@@ -39,6 +39,7 @@ namespace Online_Test
                         string id = Convert.ToString(dr["uye_id"]);
                         // burada session ile id gönderilecek...
                         Session["id"] = id;
+                        Session["ad"] = Convert.ToString(dr["ad"]);
                         HtmlMeta meta = new HtmlMeta();
                         meta.HttpEquiv = "Refresh";
                         meta.Content = "0;url=User.aspx";

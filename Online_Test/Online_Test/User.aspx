@@ -3,32 +3,57 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
+
+
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <asp:Image ID="pf" runat="server"  Width ="100" Height="100" />
-    
+    <asp:Image ID="pf" runat="server" Width="100" Height="100" />
+
     <asp:Label ID="lbl_ad" runat="server" Text="Label"></asp:Label>
-    
-   
-        
-            
-        
-    
-
-
 
 
     <script type="text/javascript">
 
         $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
 
-            $('#giris_btn').html("KULLANICI");
-            $('#giris_btn').attr({ 'href': "./Default.aspx" });
-            $('#kayit_btn').html("Çıkış Yap");
-            $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./Default.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
         });
 
 
     </script>
+
+
+
+
+
+
+
+
 
 
 

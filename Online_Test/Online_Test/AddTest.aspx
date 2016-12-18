@@ -1,11 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="AddTest.aspx.cs" Inherits="Online_Test.AddTest" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
 
 
-    
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
+
+
     <div class="container" style="max-width: 900px;">
         <div class="row" style="text-align: center">
             <h3>
@@ -21,17 +39,16 @@
             </div>
             <div class="col-md-4">
                 <div class="input-group">
-                   <asp:DropDownList ID="ddl_konu" runat="server" Width="162px">
-    </asp:DropDownList>
+                    <asp:DropDownList ID="ddl_konu" runat="server" Width="162px">
+                    </asp:DropDownList>
                 </div>
             </div>
             <div class="col-md-4">
-                
             </div>
         </div>
 
-     
-         <!-- Test ekle  -->
+
+        <!-- Test ekle  -->
         <div class="row">
             <div class="col-md-4" style="text-align: center;">
                 <h4>
@@ -39,7 +56,7 @@
                 </h4>
             </div>
             <div class="col-md-4">
-                  <div class="input-group">
+                <div class="input-group">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-user"></span>
                     </span>
@@ -47,7 +64,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-               <h5>
+                <h5>
                     <label>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_test_adi" ErrorMessage="Lütfen test adı giriniz!" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
@@ -57,7 +74,7 @@
             </div>
         </div>
 
-         <!-- Soru Sayısı Seç  -->
+        <!-- Soru Sayısı Seç  -->
         <div class="row">
             <div class="col-md-4" style="text-align: center;">
                 <h4>
@@ -66,22 +83,21 @@
             </div>
             <div class="col-md-4">
                 <div class="input-group">
-                   <asp:DropDownList ID="ddl_soru_sayisi" runat="server" Width="162px">
+                    <asp:DropDownList ID="ddl_soru_sayisi" runat="server" Width="162px">
                         <asp:ListItem Value="2"></asp:ListItem>
                         <asp:ListItem Value="5"></asp:ListItem>
                         <asp:ListItem Value="10"></asp:ListItem>
                         <asp:ListItem Value="15"></asp:ListItem>
                         <asp:ListItem Value="20"></asp:ListItem>
-                   </asp:DropDownList>
+                    </asp:DropDownList>
 
                 </div>
             </div>
             <div class="col-md-4">
-               
             </div>
         </div>
 
-        
+
         <!-- Süre Seç  -->
         <div class="row">
             <div class="col-md-4" style="text-align: center;">
@@ -101,7 +117,6 @@
                 </div>
             </div>
             <div class="col-md-4">
-               
             </div>
         </div>
 
