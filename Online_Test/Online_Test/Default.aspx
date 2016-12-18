@@ -18,7 +18,7 @@
         $(document).ready(function () {
             var ad = '<%= Session["ad"] %>';
             console.log(ad);
-            if (ad != undefined) {
+            if (ad != "") {
 
 
                 $('#giris_btn').html(ad);
