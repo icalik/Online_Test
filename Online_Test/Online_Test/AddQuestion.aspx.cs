@@ -38,7 +38,6 @@ namespace Online_Test
                     test_adi = (dr["test_adi"].ToString());
                     konu_id = (dr["konu_id"].ToString());
                     soru_sayisi = (dr["soru_sayisi"].ToString());
-                    test_suresi = (dr["test_suresi"].ToString());
                     ekleyen_id = (dr["ekleyen_id"].ToString());
 
                 }
