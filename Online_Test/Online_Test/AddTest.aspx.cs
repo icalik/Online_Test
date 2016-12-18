@@ -59,8 +59,7 @@ namespace Online_Test
                     {
                         secilen_konu = (ddl_konu.SelectedIndex + 1);
                         string soru_sayisi = (ddl_soru_sayisi.SelectedValue);
-                        string test_suresi = (ddl_sure.SelectedValue);
-                        string q = "insert into Testler(test_adi,konu_id,soru_sayisi,test_suresi,ekleyen_id) values ('" + txt_test_adi.Text + "', '" + secilen_konu + "', '" + soru_sayisi + "', '" + test_suresi + "', '" + id + "')";
+                        string q = "insert into Testler(test_adi,konu_id,soru_sayisi,ekleyen_id) values ('" + txt_test_adi.Text + "', '" + secilen_konu + "', '" + soru_sayisi + "', '" + id + "')";
                         SqlCommand cmd = new SqlCommand(q, con);
                         cmd.ExecuteNonQuery();
                         Session["SoruSayac"] = soru_sayisi;
