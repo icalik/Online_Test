@@ -88,7 +88,7 @@ namespace Online_Test
 
         protected void btn_Istatistikler_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Show.aspx");
+            Response.Redirect("ShowStatistics.aspx");
         }
     }
 }
