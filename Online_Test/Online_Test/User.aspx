@@ -56,15 +56,7 @@
 
 
 
-    <!--
-    <div class="container">
-        <asp:Button ID="btn_profil_duzenle" runat="server" OnClick="btn_profil_duzenle_Click" Text="Profil Düzenle" />
-        
-        
-        
-        <asp:Button ID="btn_Istatistikler" runat="server" OnClick="btn_Istatistikler_Click" Text="Istatistikler" />
-    </div>
-    -->
+   
     <style type="text/css">
         /* USER PROFILE PAGE */
         .card {
