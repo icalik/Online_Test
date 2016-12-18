@@ -7,7 +7,7 @@
 <asp:PlaceHolder ID = "PlaceHolder1" runat="server" />
 
  
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="183px" Width="583px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="200px" Width="600px" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="konu_adi" HeaderText="Konu Adı" SortExpression="konu_adi" />
