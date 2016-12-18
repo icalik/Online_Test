@@ -43,8 +43,8 @@ namespace Online_Test
                         ad = Convert.ToString(dr["ad"]).Trim();
                         soyad = Convert.ToString(dr["soyad"]).Trim();
                         //lbl_id.Text = "./fotograf/" + Convert.ToString(dr["profil_foto"]);
-                       pf.ImageUrl = Server.MapPath(".\\fotograf\\" + Convert.ToString(dr["profil_foto"]));
-
+                        //pf.ImageUrl = Server.MapPath(]));
+                        pf.ImageUrl = Page.ResolveUrl("~/fotograf/" + Convert.ToString(dr["profil_foto"]).Trim());
 
                     }
                     dr.Close();
