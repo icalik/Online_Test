@@ -13,6 +13,24 @@
             margin: auto;
         }
     </style>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var ad = '<%= Session["ad"] %>';
+            console.log(ad);
+            if (ad != undefined) {
+
+
+                $('#giris_btn').html(ad);
+                $('#giris_btn').attr({ 'href': "./User.aspx" });
+                $('#kayit_btn').html("Çıkış Yap");
+                $('#kayit_btn').attr({ 'href': "./LogOut.aspx" });
+            }
+
+        });
+
+
+    </script>
 
     <div class="col-md-12">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
