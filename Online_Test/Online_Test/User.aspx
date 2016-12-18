@@ -173,8 +173,9 @@
     <div class="col-lg-12 col-sm-12">
         <div class="card hovercard">
             <div class="card-background">
-                <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
-                <!-- http://lorempixel.com/850/280/people/9/ -->
+                
+                
+               <asp:Image ID="Image1" class="card-bkimg" runat="server"  />
             </div>
             <div class="useravatar">
                 <asp:Image ID="pf" runat="server"  />

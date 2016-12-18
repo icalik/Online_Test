@@ -45,6 +45,7 @@ namespace Online_Test
                         //lbl_id.Text = "./fotograf/" + Convert.ToString(dr["profil_foto"]);
                         //pf.ImageUrl = Server.MapPath(]));
                         pf.ImageUrl = Page.ResolveUrl("~/fotograf/" + Convert.ToString(dr["profil_foto"]).Trim());
+                        Image1.ImageUrl = Page.ResolveUrl("~/fotograf/" + Convert.ToString(dr["profil_foto"]).Trim());
 
                     }
                     dr.Close();
