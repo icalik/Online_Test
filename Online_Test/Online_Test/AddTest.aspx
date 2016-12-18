@@ -58,7 +58,7 @@
             <div class="col-md-4">
                 <div class="input-group">
                     <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-ok-sign"></span>
                     </span>
                     <asp:TextBox ID="txt_test_adi" runat="server" CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
                 </div>
@@ -98,27 +98,7 @@
         </div>
 
 
-        <!-- Süre Seç  -->
-        <div class="row">
-            <div class="col-md-4" style="text-align: center;">
-                <h4>
-                    <label>Test süresini belirleyin : </label>
-                </h4>
-            </div>
-            <div class="col-md-4">
-                <div class="input-group">
-                    <asp:DropDownList ID="ddl_sure" runat="server" Width="162px">
-                        <asp:ListItem Value="5">5 dk</asp:ListItem>
-                        <asp:ListItem Value="10">10 dk</asp:ListItem>
-                        <asp:ListItem Value="15">15 dk</asp:ListItem>
-                        <asp:ListItem Value="20">20 dk</asp:ListItem>
-                        <asp:ListItem Value="25">25 dk</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-            </div>
-            <div class="col-md-4">
-            </div>
-        </div>
+        
 
         <!-- Buton -->
         <div class="row">
