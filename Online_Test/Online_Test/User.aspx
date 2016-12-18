@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <asp:Image ID="pf" runat="server" ImageUrl="~/fotograf/profilfoto.jpg" Width ="100" Height="100" />
+    <asp:Image ID="pf" runat="server"  Width ="100" Height="100" />
     
     <asp:Label ID="lbl_ad" runat="server" Text="Label"></asp:Label>
     
