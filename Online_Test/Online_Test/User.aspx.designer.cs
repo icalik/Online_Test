@@ -13,13 +13,13 @@ namespace Online_Test {
     public partial class User {
         
         /// <summary>
-        /// lbl_id control.
+        /// pf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_id;
+        protected global::System.Web.UI.WebControls.Image pf;
         
         /// <summary>
         /// lbl_ad control.
@@ -65,5 +65,14 @@ namespace Online_Test {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_solve_test;
+        
+        /// <summary>
+        /// btn_Istatistikler control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Istatistikler;
     }
 }

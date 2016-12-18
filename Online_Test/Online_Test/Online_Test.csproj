@@ -144,6 +144,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="SelectTopic.aspx" />
+    <Content Include="ShowStatistics.aspx" />
     <Content Include="Testing.aspx" />
     <Content Include="User.aspx" />
     <Content Include="Web.config" />
@@ -219,6 +220,13 @@
     </Compile>
     <Compile Include="SelectTopic.aspx.designer.cs">
       <DependentUpon>SelectTopic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowStatistics.aspx.cs">
+      <DependentUpon>ShowStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowStatistics.aspx.designer.cs">
+      <DependentUpon>ShowStatistics.aspx</DependentUpon>
     </Compile>
     <Compile Include="Testing.aspx.cs">
       <DependentUpon>Testing.aspx</DependentUpon>

@@ -14,7 +14,6 @@ namespace Online_Test
         string id;
         private string ad;
         private string soyad;
-        private string konu_ad;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -43,15 +42,16 @@ namespace Online_Test
                          */
                         ad = Convert.ToString(dr["ad"]).Trim();
                         soyad = Convert.ToString(dr["soyad"]).Trim();
-
-
+                        //lbl_id.Text = "./fotograf/" + Convert.ToString(dr["profil_foto"]);
+                       pf.ImageUrl = "~/fotograf/" + Convert.ToString(dr["profil_foto"]);
+                        
                     }
                     dr.Close();
                 }
                 catch (Exception)
                 {
                     lbl_ad.Text = "Session Yok Giris Yapiniz!";
-                    lbl_id.Text = "";
+                   
 
                 }
 
@@ -84,6 +84,11 @@ namespace Online_Test
         protected void btn_solve_test_Click(object sender, EventArgs e)
         {
             Response.Redirect("SelectTopic.aspx");
+        }
+
+        protected void btn_Istatistikler_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Show.aspx");
         }
     }
 }

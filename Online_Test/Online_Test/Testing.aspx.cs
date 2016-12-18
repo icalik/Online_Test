@@ -37,11 +37,27 @@ namespace Online_Test
                     lbl_baslik.Text = sayac + ". Soruyu Çöz...";
                     SoruID = dr["soru_id"].ToString();
                     lbl_soru.Text = dr["soru"].ToString();
-                    rb_cevaplar.Items.Add(dr["dogru_cevap"].ToString());
-                    rb_cevaplar.Items.Add(dr["cevap2"].ToString());
-                    rb_cevaplar.Items.Add(dr["cevap3"].ToString());
-                    rb_cevaplar.Items.Add(dr["cevap4"].ToString());
-                    rb_cevaplar.Items.Add(dr["cevap5"].ToString());
+
+
+
+                    Random ran = new Random();
+                    var numbers = Enumerable.Range(1, 5).OrderBy(i => ran.Next()).ToList();
+
+                    List<ListItem> ans = new List<ListItem>();
+                    ans.Add(new ListItem(dr["dogru_cevap"].ToString(), "A"));
+                    ans.Add(new ListItem(dr["cevap2"].ToString(), "B"));
+                    ans.Add(new ListItem(dr["cevap3"].ToString(), "C"));
+                    ans.Add(new ListItem(dr["cevap4"].ToString(), "D"));
+                    ans.Add(new ListItem(dr["cevap5"].ToString(), "E"));
+                    foreach (int num in numbers)
+                    {
+                        rb_cevaplar.Items.Add(ans[num - 1]);
+                    }
+
+
+
+
+                    
                     dogru_cevap = dr["dogru_cevap"].ToString();
                 }
                 dr.Close();

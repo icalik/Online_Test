@@ -48,7 +48,7 @@ namespace Online_Test
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string q1 = "Select count(*) from Cozulen_Test where test_id = (select test_id from Testler where test_adi = '" + SecilenTest + "') ";
+                string q1 = "Select count(*) from Cozulen_Test where test_id = (select test_id from Testler where test_adi = '" + SecilenTest + "') and cozen_id='" + id +"'";
                 SqlCommand cmd1 = new SqlCommand(q1, con);
                 cmd1.ExecuteNonQuery();
                 int say = (int)cmd1.ExecuteScalar();
