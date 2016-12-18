@@ -10,60 +10,51 @@
 namespace Online_Test {
     
     
-    public partial class User {
+    public partial class SolveTest {
         
         /// <summary>
-        /// lbl_id control.
+        /// ddl_konu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_id;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_konu;
         
         /// <summary>
-        /// lbl_ad control.
+        /// dll_test_sec control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ad;
+        protected global::System.Web.UI.WebControls.DropDownList dll_test_sec;
         
         /// <summary>
-        /// btn_profil_duzenle control.
+        /// btn_konu_sec control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_profil_duzenle;
+        protected global::System.Web.UI.WebControls.Button btn_konu_sec;
         
         /// <summary>
-        /// btn_konu_ekle control.
+        /// lbl_uyari control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_konu_ekle;
+        protected global::System.Web.UI.WebControls.Label lbl_uyari;
         
         /// <summary>
-        /// btn_test_ekle control.
+        /// lbl_hata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_test_ekle;
-        
-        /// <summary>
-        /// btn_solve_test control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_solve_test;
+        protected global::System.Web.UI.WebControls.Label lbl_hata;
     }
 }

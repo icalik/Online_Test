@@ -24,6 +24,9 @@
 
     </script>
 
+    <br />
+    <br />
+
     <div class="container">
         <asp:Button ID="btn_profil_duzenle" runat="server" OnClick="btn_profil_duzenle_Click" Text="Profil Düzenle" />
         <asp:Button ID="btn_konu_ekle" runat="server" OnClick="btn_konu_ekle_Click" Text="Konu Ekle" />
@@ -31,7 +34,7 @@
 
   
 
-        <asp:Button ID="btn_soru_ekle" runat="server" OnClick="btn_soru_ekle_Click" Text="Soru Ekle" />
+        <asp:Button ID="btn_solve_test" runat="server" OnClick="btn_solve_test_Click" Text="Test Çöz" />
 
   
 

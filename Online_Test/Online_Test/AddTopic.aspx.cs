@@ -30,7 +30,7 @@ namespace Online_Test
             if (con.State == System.Data.ConnectionState.Open)
             {
                 konu = txt_konu.Text.ToUpper();
-                string q1 = "select count(*) from Konular where konu_adi='" + txt_konu.Text.ToUpper() + "'";
+                string q1 = "select count(*) from Konular where konu_adi='" + konu + "'";
                 SqlCommand cmd1 = new SqlCommand(q1, con);
                 cmd1.ExecuteNonQuery();
                 int say = (int)cmd1.ExecuteScalar();

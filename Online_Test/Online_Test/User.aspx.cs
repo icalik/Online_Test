@@ -80,5 +80,10 @@ namespace Online_Test
         {
             Response.Redirect("AddQuestion.aspx");
         }
+
+        protected void btn_solve_test_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SelectTopic.aspx");
+        }
     }
 }

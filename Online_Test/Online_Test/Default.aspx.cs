@@ -22,7 +22,7 @@ namespace Online_Test
                 try
                 {
                    
-                    string q = "SELECT TOP 100 [konu_id],[konu_adi],[ekleyen] FROM[dbo].[Konular] order by konu_adi asc";
+                    string q = "SELECT TOP 10 [konu_id],[konu_adi],[ekleyen] FROM[dbo].[Konular] order by konu_adi asc";
 
                     SqlCommand com = new SqlCommand(q, con);
                     SqlDataReader dr = com.ExecuteReader();

@@ -64,7 +64,7 @@ namespace Online_Test
                         SqlCommand cmd = new SqlCommand(q, con);
                         cmd.ExecuteNonQuery();
                         Session["SoruSayac"] = soru_sayisi;
-                        Session["sayac"] = 0;
+                        Session["sayac"] = 1;
                         lbl_uyari.Text = "Kaydedildi!";
                         HtmlMeta meta = new HtmlMeta();
                         meta.HttpEquiv = "Refresh";

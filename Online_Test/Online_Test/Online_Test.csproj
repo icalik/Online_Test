@@ -102,7 +102,6 @@
     <Content Include="AddTopic.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="EditProfile.aspx" />
-    <Content Include="jsonToDB.asmx" />
     <Content Include="Login.aspx" />
     <Content Include="LogOut.aspx" />
     <Content Include="packages.config">
@@ -112,7 +111,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Register.aspx" />
-    <Content Include="Register_Eski.aspx" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
@@ -145,6 +143,8 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="SelectTopic.aspx" />
+    <Content Include="Testing.aspx" />
     <Content Include="User.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -184,10 +184,6 @@
     <Compile Include="EditProfile.aspx.designer.cs">
       <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="jsonToDB.asmx.cs">
-      <DependentUpon>jsonToDB.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -217,14 +213,20 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Register_Eski.aspx.cs">
-      <DependentUpon>Register_Eski.aspx</DependentUpon>
+    <Compile Include="SelectTopic.aspx.cs">
+      <DependentUpon>SelectTopic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Register_Eski.aspx.designer.cs">
-      <DependentUpon>Register_Eski.aspx</DependentUpon>
+    <Compile Include="SelectTopic.aspx.designer.cs">
+      <DependentUpon>SelectTopic.aspx</DependentUpon>
     </Compile>
-    <Compile Include="sorular.cs" />
+    <Compile Include="Testing.aspx.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testing.aspx.designer.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
