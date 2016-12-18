@@ -3,22 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <style type="text/css">
-        .auto-style1 {
-            font-size: x-large;
-            text-align: center;
-            position: center;
-        }
-
-        .auto-style2 {
-            font-size: xx-large;
-        }
-
-        .auto-style3 {
-            text-align: left;
-        }
-    </style>
 
 
     <div class="container" style="max-width: 900px;">
@@ -125,6 +109,9 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_parola1" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txt_parola2" ControlToValidate="txt_parola1" ErrorMessage="Parolalar Uyuşmuyor." ForeColor="Red"></asp:CompareValidator>
+                       <br/>
+                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txt_parola1" ErrorMessage="8-15 Karekter ve büyük - küçük harf olmak zorunda!" ForeColor="Red" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></asp:RegularExpressionValidator>
+
                     </label>
                 </h5>
             </div>
