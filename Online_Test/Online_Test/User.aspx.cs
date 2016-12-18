@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace Online_Test
@@ -14,9 +15,17 @@ namespace Online_Test
         string id;
         private string ad;
         private string soyad;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+            //
+
+            id = Session["id"].ToString();
+            SqlDataSource1.SelectCommand = "select k.konu_adi,t.test_adi,t.soru_sayisi, count(durum) as dogru_sayisi,((CAST(count(durum) AS float)/t.soru_sayisi)*100) as puan from Cozulen_Test ct, Testler t, Konular k where ct.cozen_id = " + id + " and ct.test_id = t.test_id and t.konu_id = k.konu_id and durum = 1 group by t.test_adi,k.konu_adi,t.soru_sayisi";
+
+            //
+
             string baglanti = WebConfigurationManager.ConnectionStrings["OnlineTestConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(baglanti);
             con.Open();
@@ -63,34 +72,43 @@ namespace Online_Test
             }
         }
 
-        protected void btn_profil_duzenle_Click(object sender, EventArgs e)
+        
+
+        protected void btn_profil_duzenle_kaydet_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EditProfile.aspx");
+            id = Session["id"].ToString();
+            // string ad_gelen = Convert.ToString(txt_profil_ad.Text);
+            string baglanti = WebConfigurationManager.ConnectionStrings["OnlineTestConnectionString"].ConnectionString;
+            SqlConnection con = new SqlConnection(baglanti);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                ad = txt_ad.Text;
+                soyad = txt_soyad.Text;
+                try
+                {
+
+                    string q2 = "update Uyeler set ad='" + ad + "', soyad='" + soyad + "', parola='" + txt_parola1.Text + "' where uye_id='" + id + "'";
+
+                    SqlCommand com1 = new SqlCommand(q2, con);
+                    com1.ExecuteNonQuery();
+                    lbl_uyari.Text = "Kaydedildi!";
+                    Session["ad"] = txt_ad.Text;
+                    HtmlMeta meta = new HtmlMeta();
+                    meta.HttpEquiv = "Refresh";
+                    meta.Content = "0;url=User.aspx";
+                    this.Page.Controls.Add(meta);
+                   
+
+                }
+                catch (Exception)
+                {
+
+                    lbl_uyari.Text = "Hata oluştu." + e.ToString();
+                }
+            }
         }
 
-        protected void btn_konu_ekle_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddTopic.aspx");
-        }
-
-        protected void btn_test_ekle_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddTest.aspx");
-        }
-
-        protected void btn_soru_ekle_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddQuestion.aspx");
-        }
-
-        protected void btn_solve_test_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("SelectTopic.aspx");
-        }
-
-        protected void btn_Istatistikler_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ShowStatistics.aspx");
-        }
+       
     }
 }

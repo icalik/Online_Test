@@ -23,9 +23,9 @@
     </script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
 
-    
+
+
 
 
     <script type="text/javascript">
@@ -59,9 +59,9 @@
     <!--
     <div class="container">
         <asp:Button ID="btn_profil_duzenle" runat="server" OnClick="btn_profil_duzenle_Click" Text="Profil Düzenle" />
-        <asp:Button ID="btn_konu_ekle" runat="server" OnClick="btn_konu_ekle_Click" Text="Konu Ekle" />
-        <asp:Button ID="btn_test_ekle" runat="server" OnClick="btn_test_ekle_Click" Text="Test Ekle" />
-        <asp:Button ID="btn_solve_test" runat="server" OnClick="btn_solve_test_Click" Text="Test Çöz" />
+        
+        
+        
         <asp:Button ID="btn_Istatistikler" runat="server" OnClick="btn_Istatistikler_Click" Text="Istatistikler" />
     </div>
     -->
@@ -173,35 +173,37 @@
     <div class="col-lg-12 col-sm-12">
         <div class="card hovercard">
             <div class="card-background">
-                
-                
-               <asp:Image ID="Image1" class="card-bkimg" runat="server"  />
+
+
+                <asp:Image ID="Image1" class="card-bkimg" runat="server" />
             </div>
             <div class="useravatar">
-                <asp:Image ID="pf" runat="server"  />
+                <asp:Image ID="pf" runat="server" />
             </div>
             <div class="card-info">
-                <span class="card-title"><asp:Label ID="lbl_ad" runat="server" Text="Label"></asp:Label></span>
+                <span class="card-title">
+                    <asp:Label ID="lbl_ad" runat="server" Text="Label"></asp:Label></span>
 
             </div>
         </div>
         <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
             <div class="btn-group" role="group">
                 <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <div class="hidden-xs">Stars</div>
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    <div class="hidden-xs">Test İşlemleri</div>
                 </button>
             </div>
             <div class="btn-group" role="group">
                 <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab">
-                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                    <div class="hidden-xs">Favorites</div>
+
+                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                    <div class="hidden-xs">İstatistikler</div>
                 </button>
             </div>
             <div class="btn-group" role="group">
                 <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab">
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    <div class="hidden-xs">Following</div>
+                    <div class="hidden-xs">Kullanıcı Düzenle</div>
                 </button>
             </div>
         </div>
@@ -209,13 +211,216 @@
         <div class="well">
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="tab1">
-                    <h3>This is tab 1</h3>
+                    <h3 style="text-align: center">Test İşlemleri</h3>
+                    <br />
+                    <br />
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4" style="text-align: center">
+                                <a href="AddTopic.aspx">
+                                    <div class="btn btn-info" style="width: 200px; height: 50px; padding-top: 15px">Konu Ekle</div>
+                                </a>
+
+                            </div>
+                            <div class="col-md-4" style="text-align: center">
+                                <a href="AddTest.aspx">
+                                    <div class="btn btn-warning" style="width: 200px; height: 50px; padding-top: 15px">Test Ekle</div>
+                                </a>
+                            </div>
+                            <div class="col-md-4" style="text-align: center">
+                                <a href="SelectTopic.aspx">
+                                    <div class="btn btn-success" style="width: 200px; height: 50px; padding-top: 15px">Test Çöz</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
                 </div>
-                <div class="tab-pane fade in" id="tab2">
-                    <h3>This is tab 2</h3>
+                <div class="tab-pane fade in" id="tab2" style="text-align: center">
+                    <h3 style="text-align: center">Istatistikler</h3>
+                    <br />
+                    <center>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" Height="200px" Width="600px" AllowPaging="True">
+                        <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:BoundField DataField="konu_adi" HeaderText="Konu Adı" SortExpression="konu_adi" />
+                            <asp:BoundField DataField="test_adi" HeaderText="Test Adı" SortExpression="test_adi" />
+                            <asp:BoundField DataField="soru_sayisi" HeaderText="Soru Sayısı" SortExpression="soru_sayisi" />
+                            <asp:BoundField DataField="dogru_sayisi" HeaderText="Doğru Sayısı" ReadOnly="True" SortExpression="dogru_sayisi" />
+                            <asp:BoundField DataField="puan" HeaderText="Puan" ReadOnly="True" SortExpression="puan" />
+                        </Columns>
+                        <FooterStyle BackColor="#CCCC99" />
+                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                        <RowStyle BackColor="#F7F7DE" />
+                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                        <SortedDescendingHeaderStyle BackColor="#575357" />
+                    </asp:GridView>
+                    </center>
+
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Online_TestConnectionString %>"></asp:SqlDataSource>
+
                 </div>
                 <div class="tab-pane fade in" id="tab3">
-                    <h3>This is tab 3</h3>
+
+
+                    <div class="container" style="max-width: 900px;">
+                        <div class="row" style="text-align: center">
+                            <h3>
+                                <label>Profil Düzenle</label></h3>
+                        </div>
+                        <!-- Ad  -->
+                        <div class="row">
+                            <div class="col-md-4" style="text-align: center;">
+                                <h4>
+                                    <label>Adınız :</label>
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                    </span>
+                                    <asp:TextBox ID="txt_ad" runat="server" CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
+                                    <h5>
+                                        <label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_ad" ErrorMessage="Lütfen adınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <br />
+                                            <br />
+                                        </label>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+
+                        <!-- Soyad  -->
+                        <div class="row">
+                            <div class="col-md-4" style="text-align: center;">
+                                <h4>
+                                    <label>Soyadınız :</label>
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-arrow-right"></span>
+                                    </span>
+                                    <asp:TextBox ID="txt_soyad" runat="server" CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
+                                    <h5>
+                                        <label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_soyad" ErrorMessage="Lütfen soyadınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <br />
+                                            <br />
+                                        </label>
+                                    </h5>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+
+
+
+                        <!-- Parola  -->
+                        <div class="row">
+                            <div class="col-md-4" style="text-align: center;">
+                                <h4>
+                                    <label>Parola oluşturun :</label>
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-lock"></span>
+                                    </span>
+                                    <asp:TextBox ID="txt_parola1" runat="server" CssClass="form-control" aria-describedby="sizing-addon2" TextMode="Password"></asp:TextBox>
+                                    <h5>
+                                        <label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_parola1" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <br />
+                                            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txt_parola2" ControlToValidate="txt_parola1" ErrorMessage="Parolalar Uyuşmuyor." ForeColor="Red"></asp:CompareValidator>
+                                        </label>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+
+
+                        <!-- Parola yeniden  -->
+                        <div class="row">
+                            <div class="col-md-4" style="text-align: center;">
+                                <h4>
+                                    <label>Parolanızı onaylayın :</label>
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">
+                                        <span class="glyphicon glyphicon-lock"></span>
+                                    </span>
+                                    <asp:TextBox ID="txt_parola2" runat="server" CssClass="form-control" aria-describedby="sizing-addon2" TextMode="Password"></asp:TextBox>
+                                    <h5>
+                                        <label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_parola2" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <br />
+                                            <br />
+                                        </label>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+
+
+
+                        <!-- Buton -->
+                        <div class="row">
+                            <div class="col-md-4" style="text-align: center;">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <asp:Button ID="btn_profil_duzenle_kaydet" runat="server" OnClick="btn_profil_duzenle_kaydet_Click" Text="Kaydet" CssClass="btn btn-warning" />
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <asp:Label ID="lbl_uyari" runat="server"></asp:Label>
+
+                            </div>
+                        </div>
+
+                        <!-- Hata Kısmı  -->
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <div class="form-group" style="color: red; text-align: center;">
+                                    <h4>
+                                        <label>
+                                            <asp:Label ID="lbl_hata" runat="server"></asp:Label>
+                                        </label>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+
+                    </div>
+
+
+
                 </div>
             </div>
         </div>

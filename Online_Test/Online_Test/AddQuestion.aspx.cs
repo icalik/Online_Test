@@ -12,7 +12,7 @@ namespace Online_Test
 {
     public partial class AddQuestion : System.Web.UI.Page
     {
-        string id,test_id, test_adi, konu_id, soru_sayisi, test_suresi, ekleyen_id, son_eklenen_id;
+        string id, test_id, test_adi, konu_id, soru_sayisi, ekleyen_id;
         int SoruBitis,sayac;
       
 
