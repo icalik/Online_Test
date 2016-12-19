@@ -41,7 +41,7 @@ namespace Online_Test
 
                     while (dr.Read())
                     {
-                        lbl_ad.Text = "Hoşgeldin " + Convert.ToString(dr["ad"]);
+                        lbl_ad.Text =Convert.ToString(dr["ad"] + " " + Convert.ToString(dr["soyad"]));
                         /* lbl_profil_ad.Text = Convert.ToString(dr["ad"]);
                          lbl_profil_soyad.Text = Convert.ToString(dr["soyad"]);
                          lbl_profil_mail.Text = Convert.ToString(dr["mail"]);

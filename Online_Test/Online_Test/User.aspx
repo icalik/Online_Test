@@ -127,7 +127,7 @@
                 padding: 0 5px;
                 font-size: 20px;
                 line-height: 1;
-                color: #262626;
+                color: #fff;
                 background-color: rgba(255, 255, 255, 0.1);
                 -webkit-border-radius: 4px;
                 -moz-border-radius: 4px;
