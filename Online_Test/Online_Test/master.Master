@@ -42,6 +42,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="./Default.aspx">Ana Sayfa <span class="sr-only">(current)</span></a></li>
+                            <li><a href="./User.aspx">Profil Sayfası</a></li>
                             <li><a href="./About.aspx">Hakkında</a></li>
                             
                         </ul>
