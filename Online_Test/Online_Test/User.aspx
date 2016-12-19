@@ -56,7 +56,7 @@
 
 
 
-   
+
     <style type="text/css">
         /* USER PROFILE PAGE */
         .card {
@@ -195,7 +195,7 @@
             <div class="btn-group" role="group">
                 <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab">
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    <div class="hidden-xs">Kullanıcı Düzenle</div>
+                    <div class="hidden-xs">Profil Düzenle</div>
                 </button>
             </div>
         </div>
@@ -279,14 +279,15 @@
                                         <span class="glyphicon glyphicon-user"></span>
                                     </span>
                                     <asp:TextBox ID="txt_ad" runat="server" CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
-                                    <h5>
-                                        <label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_ad" ErrorMessage="Lütfen adınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <br />
-                                            <br />
-                                        </label>
-                                    </h5>
+
                                 </div>
+                                <h5>
+                                    <label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_ad" ErrorMessage="Lütfen adınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
+                                    </label>
+                                </h5>
                             </div>
                             <div class="col-md-4">
                             </div>
@@ -305,14 +306,15 @@
                                         <span class="glyphicon glyphicon-arrow-right"></span>
                                     </span>
                                     <asp:TextBox ID="txt_soyad" runat="server" CssClass="form-control" aria-describedby="sizing-addon2"></asp:TextBox>
-                                    <h5>
-                                        <label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_soyad" ErrorMessage="Lütfen soyadınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <br />
-                                            <br />
-                                        </label>
-                                    </h5>
+
                                 </div>
+                                <h5>
+                                    <label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_soyad" ErrorMessage="Lütfen soyadınızı eksiksiz giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
+                                    </label>
+                                </h5>
 
                             </div>
                             <div class="col-md-4">
@@ -334,14 +336,15 @@
                                         <span class="glyphicon glyphicon-lock"></span>
                                     </span>
                                     <asp:TextBox ID="txt_parola1" runat="server" CssClass="form-control" aria-describedby="sizing-addon2" TextMode="Password"></asp:TextBox>
-                                    <h5>
-                                        <label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_parola1" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <br />
-                                            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txt_parola2" ControlToValidate="txt_parola1" ErrorMessage="Parolalar Uyuşmuyor." ForeColor="Red"></asp:CompareValidator>
-                                        </label>
-                                    </h5>
+
                                 </div>
+                                <h5>
+                                    <label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_parola1" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txt_parola2" ControlToValidate="txt_parola1" ErrorMessage="Parolalar Uyuşmuyor." ForeColor="Red"></asp:CompareValidator>
+                                    </label>
+                                </h5>
                             </div>
                             <div class="col-md-4">
                             </div>
@@ -361,14 +364,15 @@
                                         <span class="glyphicon glyphicon-lock"></span>
                                     </span>
                                     <asp:TextBox ID="txt_parola2" runat="server" CssClass="form-control" aria-describedby="sizing-addon2" TextMode="Password"></asp:TextBox>
-                                    <h5>
-                                        <label>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_parola2" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <br />
-                                            <br />
-                                        </label>
-                                    </h5>
+
                                 </div>
+                                <h5>
+                                    <label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_parola2" ErrorMessage="Lütfen parola giriniz." ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <br />
+                                        <br />
+                                    </label>
+                                </h5>
                             </div>
                             <div class="col-md-4">
                             </div>
@@ -381,12 +385,12 @@
                             <div class="col-md-4" style="text-align: center;">
                             </div>
                             <div class="col-md-4">
+                                <center>
                                 <div class="form-group">
                                     <asp:Button ID="btn_profil_duzenle_kaydet" runat="server" OnClick="btn_profil_duzenle_kaydet_Click" Text="Kaydet" CssClass="btn btn-warning" />
 
-
-
                                 </div>
+                                    </center>
                             </div>
                             <div class="col-md-4">
                                 <asp:Label ID="lbl_uyari" runat="server"></asp:Label>
