@@ -33,6 +33,7 @@ namespace Online_Test
             {
                 try
                 {
+                    // Burası Ad soyad doldurmak için
                     id = Session["id"].ToString();
                     string q = "select * from Uyeler where uye_id=" + id + "";
 
@@ -42,33 +43,47 @@ namespace Online_Test
                     while (dr.Read())
                     {
                         lbl_ad.Text =Convert.ToString(dr["ad"] + " " + Convert.ToString(dr["soyad"]));
-                        /* lbl_profil_ad.Text = Convert.ToString(dr["ad"]);
-                         lbl_profil_soyad.Text = Convert.ToString(dr["soyad"]);
-                         lbl_profil_mail.Text = Convert.ToString(dr["mail"]);
-                         lbl_profil_yetki.Text = Convert.ToString(dr["yetki"]);
-                         lbl_profil_pfoto.Text = Convert.ToString(dr["profil_foto"]);
-                         lbl_profil_uyeolmatarihi.Text = Convert.ToString(dr["uye_olma_tarihi"]);
-                         */
                         ad = Convert.ToString(dr["ad"]).Trim();
                         soyad = Convert.ToString(dr["soyad"]).Trim();
-                        //lbl_id.Text = "./fotograf/" + Convert.ToString(dr["profil_foto"]);
-                        //pf.ImageUrl = Server.MapPath(]));
                         pf.ImageUrl = Page.ResolveUrl("~/fotograf/" + Convert.ToString(dr["profil_foto"]).Trim());
                         Image1.ImageUrl = Page.ResolveUrl("~/fotograf/" + Convert.ToString(dr["profil_foto"]).Trim());
 
                     }
                     dr.Close();
+
+                    // Burası son eklediği konuları  doldurmak için
+
+                    string konusorgu = "SELECT TOP 10 [konu_id],[konu_adi],[ekleyen] FROM[dbo].[Konular] where ekleyen = '" + id + "' order by konu_adi asc";
+
+                    SqlCommand com1 = new SqlCommand(konusorgu, con);
+                    SqlDataReader dr1 = com1.ExecuteReader();
+
+                    while (dr1.Read())
+                    {
+                        literal_konu.Text = literal_konu.Text + "• " + dr1["konu_adi"] + "<br/>";
+                    }
+                    dr1.Close();
+
+
+                    // Burası son eklediği testleri doldurmak için
+
+                    string Testsorgu = "SELECT TOP 10 [test_adi] FROM [dbo].[Testler] where ekleyen_id = '" + id + "' order by test_id desc";
+
+                    SqlCommand com2 = new SqlCommand(Testsorgu, con);
+                    SqlDataReader dr2 = com2.ExecuteReader();
+
+                    while (dr2.Read())
+                    {
+                        literal_test.Text = literal_test.Text + "• " + dr2["test_adi"] + "<br/>";
+                    }
+                    dr2.Close();
+
                 }
                 catch (Exception)
                 {
                     lbl_ad.Text = "Session Yok Giris Yapiniz!";
-                   
-
                 }
-
-
-
-
+                
             }
         }
 

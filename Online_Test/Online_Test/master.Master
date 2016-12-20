@@ -68,6 +68,8 @@
 
                     </div>
 
+
+                     <!--Yan menü-->
                     <div class="col-xs-6 col-md-3">
                         <div class="panel panel-info">
                             <div class="panel-heading">Son Ekenen Konular</div>
@@ -90,7 +92,7 @@
 
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                        <!--Yan menü-->
+                       
 
                     </asp:ContentPlaceHolder>
                 </div>

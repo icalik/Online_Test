@@ -256,6 +256,27 @@
                     </center>
 
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Online_TestConnectionString %>"></asp:SqlDataSource>
+                    <br />
+                    <br />
+
+
+                    <!--burası  -->
+                   
+                        <div class="panel panel-success">
+                            <div class="panel-heading">Son Eklediğin Konular</div>
+                            <div class="panel-body">
+                                <asp:Literal ID="literal_konu" runat="server"></asp:Literal>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">Son Eklediğin Testler</div>
+                            <div class="panel-body">
+                                <asp:Literal ID="literal_test" runat="server"></asp:Literal>
+                            </div>
+                        </div>
+                    
+
 
                 </div>
                 <div class="tab-pane fade in" id="tab3">
@@ -420,7 +441,7 @@
                 </div>
             </div>
         </div>
-
+        
     </div>
 
 

@@ -13,7 +13,7 @@ namespace Online_Test
 {
     public partial class AddTest : System.Web.UI.Page
     {
-        string id;
+        string id,konu_id;
         int secilen_konu;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -57,9 +57,10 @@ namespace Online_Test
                 {
                     try
                     {
-                        secilen_konu = (ddl_konu.SelectedIndex + 1);
+
+                        string s_konu = konusec(ddl_konu.SelectedValue);
                         string soru_sayisi = (ddl_soru_sayisi.SelectedValue);
-                        string q = "insert into Testler(test_adi,konu_id,soru_sayisi,ekleyen_id) values ('" + txt_test_adi.Text + "', '" + secilen_konu + "', '" + soru_sayisi + "', '" + id + "')";
+                        string q = "insert into Testler(test_adi,konu_id,soru_sayisi,ekleyen_id) values ('" + txt_test_adi.Text + "', '" + s_konu + "', '" + soru_sayisi + "', '" + id + "')";
                         SqlCommand cmd = new SqlCommand(q, con);
                         cmd.ExecuteNonQuery();
                         Session["SoruSayac"] = soru_sayisi;
@@ -78,6 +79,27 @@ namespace Online_Test
                     }
                 }
             }
+        }
+
+        private string konusec(string v)
+        {
+           
+            string baglanti = WebConfigurationManager.ConnectionStrings["OnlineTestConnectionString"].ConnectionString;
+            SqlConnection con = new SqlConnection(baglanti);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "select konu_id from Konular where konu_adi = '" + v + "'";
+                SqlCommand com = new SqlCommand(q, con);
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    konu_id = dr["konu_id"].ToString();
+                }
+
+            }
+            return konu_id;
         }
     }
 }
