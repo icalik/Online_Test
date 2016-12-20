@@ -254,51 +254,6 @@
                         <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView>
                     </center>
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource_Son_Eklenen_Konular">
-                                    <Columns>
-                                        <asp:BoundField DataField="konu_adi" HeaderText="konu_adi" SortExpression="konu_adi" />
-                                    </Columns>
-                                    <FooterStyle BackColor="White" ForeColor="#000066" />
-                                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                    <RowStyle ForeColor="#000066" />
-                                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                    <SortedDescendingHeaderStyle BackColor="#00547E" />
-                                </asp:GridView>
-                                <asp:SqlDataSource ID="SqlDataSource_Son_Eklenen_Konular" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineTestConnectionString %>"></asp:SqlDataSource>
-
-                            </div>
-                            <div class="col-md-6">
-
-                                <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource_Son_Eklenen_Test" GridLines="Vertical">
-                                    <AlternatingRowStyle BackColor="#DCDCDC" />
-                                    <Columns>
-                                        <asp:BoundField DataField="test_adi" HeaderText="Test Adı" SortExpression="test_adi" />
-                                    </Columns>
-                                    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                    <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
-                                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                                    <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
-                                    <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                    <SortedAscendingHeaderStyle BackColor="#0000A9" />
-                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                    <SortedDescendingHeaderStyle BackColor="#000065" />
-                                </asp:GridView>
-
-                                <asp:SqlDataSource ID="SqlDataSource_Son_Eklenen_Test" runat="server" ConnectionString="<%$ ConnectionStrings:OnlineTestConnectionString %>"></asp:SqlDataSource>
-
-                            </div>
-                        </div>
-                    </div>
-
-
 
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Online_TestConnectionString %>"></asp:SqlDataSource>
                     <br />
