@@ -1,0 +1,28 @@
+13542516 - İsmet Said Çalık
+13542523 - Ahmet Çümen
+
+
+Beni Oku
+--------
+
+Bu proje, bu klasörde olup aynı zamanda 
+http://firatonlinetest.azurewebsites.net
+adresinde çalışan Azure Web Applicationa deploy edilmiştir.
+
+Bu projeyi 2 kişi hazırlamış olup, 
+http://github.com/icalik/Online_Test 
+reposunda bulunmaktadır. Sol taraftan commits kısmında projeyi geliştirenlerin ne yaptıklarını ve kaynak kodda neleri değiştirdiğini görebilirsiniz.
+-------------------
+Demo Hesap
+
+demo@demo.com
+demo
+-------------------
+
+---------------------
+
+Default.aspx - Ana Sayfa
+Login.aspx - Giriş Sayfası
+Register.aspx - Kayıt Sayfası
+
+-----------------
